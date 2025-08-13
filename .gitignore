@@ -1,0 +1,13 @@
+# Node
+node_modules/
+
+# Build outputs
+.next/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+"client/node_modules/" 
+"node_modules/" 
