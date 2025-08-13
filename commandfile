@@ -1,0 +1,9 @@
+# For Windows
+python -m venv venv
+
+# For Windows
+.\venv\Scripts\activate
+
+# download  Flask for the web server, Flask-CORS
+pip install Flask Flask-CORS opencv-python Pillow numpy
+
