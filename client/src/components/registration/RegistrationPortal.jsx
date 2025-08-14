@@ -1,14 +1,12 @@
-'use client';
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { AnimatePresence, motion } from 'framer-motion';
-
 import { FormStep } from './FormStep';
 import { ConfirmationStep } from './ConfirmationStep';
 import { SuccessStep } from './SuccessStep';
+
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: 'Full name must be at least 2 characters.' }),
@@ -20,39 +18,35 @@ const formSchema = z.object({
   photo: z.string().refine(val => val.startsWith('data:image/'), { message: 'A passport-style photo is required.' }),
 });
 
+
 export function RegistrationPortal() {
   const [step, setStep] = useState(1);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
     mode: 'onChange',
+    defaultValues: {
+      fullName: '',
+      email: '',
+      phoneNumber: '',
+      dateOfBirth: null, // null instead of undefined
+      university: '',
+      gender: '', // empty string instead of undefined
+      photo: '',
+    },
   });
 
   const nextStep = () => setStep(prev => prev + 1);
   const prevStep = () => setStep(prev => prev - 1);
+
   const reset = () => {
-    form.reset({
-      fullName: '',
-      email: '',
-      phoneNumber: '',
-      dateOfBirth: undefined,
-      university: '',
-      gender: undefined,
-      photo: '',
-    });
+    form.reset(); // This will now reset to defaultValues above
     setStep(1);
   };
+
   const clearForm = () => {
-    form.reset({
-      fullName: '',
-      email: '',
-      phoneNumber: '',
-      dateOfBirth: undefined,
-      university: '',
-      gender: undefined,
-      photo: '',
-    });
-  }
+    form.reset(); // Same here
+  };
 
   return (
     <div className="w-full max-w-4xl">
@@ -71,4 +65,4 @@ export function RegistrationPortal() {
       </AnimatePresence>
     </div>
   );
-} 
+}
