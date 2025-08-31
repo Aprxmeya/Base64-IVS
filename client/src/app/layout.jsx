@@ -1,3 +1,27 @@
+// import './globals.css';
+// import { Toaster } from "@/components/ui/toaster"
+
+// export const metadata = {
+//   title: 'Registration Portal',
+//   description: 'User Registration Portal',
+// };
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en" suppressHydrationWarning>
+//       <head>
+//         <link rel="preconnect" href="https://fonts.googleapis.com" />
+//         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+//         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+//       </head>
+//       <body className="font-body antialiased">
+//         {children}
+//         <Toaster />
+//       </body>
+//     </html>
+//   );
+// } 
+
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
@@ -8,7 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -20,4 +44,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-} 
+}

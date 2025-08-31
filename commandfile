@@ -1,0 +1,28 @@
+# For Windows installation
+python -m venv venv
+
+### For Windows activation of virt env
+.\venv\Scripts\activate
+
+# download  Flask for the web server, Flask-CORS
+pip install Flask Flask-CORS opencv-python Pillow numpy
+
+# new version of image validation 
+pip install python-dotenv 
+
+
+
+
+
+Run this inside your venv:
+pip install psycopg2-binary
+If you want the source package instead:
+pip install psycopg2
+(But on Windows, psycopg2-binary is usually safer.)
+Verify installation
+After installation, run:
+pip show psycopg2-binary
+or
+pip list
+and check if it appears.
+
