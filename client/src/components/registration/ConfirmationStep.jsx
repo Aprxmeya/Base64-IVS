@@ -331,7 +331,8 @@ export function ConfirmationStep({ formData, prevStep, nextStep }) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/register', {
+     // const response = await fetch('http://localhost:5000/api/register', { no need as this is for local dev
+     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
