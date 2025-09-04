@@ -368,7 +368,8 @@ import cv2
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:9002"}})
+# CORS(app, resources={r"/api/*": {"origins": "http://localhost:9002"}}) no need of this as this was for local system run.
+CORS(app)
 
 # --- Get the database URL from your .env file ---
 DATABASE_URL = os.environ.get('DATABASE_URL')
