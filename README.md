@@ -2,8 +2,6 @@
 
 A full-stack application for user registration featuring AI-powered face detection and data validation, built with Next.js and Flask. Deployed on Vercel and Render.
 
-![Project Screenshot](https://your-image-url.com/your-project-screenshot.png)
-
 ---
 ## 🚀 Built With
 
@@ -84,7 +82,7 @@ To run the application locally, you will need to start both the frontend and bac
     The application will open in your browser at `http://localhost:9002`.
 
 ---
-## ✨ Authors & Contributors
+##  Authors & Contributors
 
 This project is proudly built and maintained by:
 
