@@ -1,4 +1,4 @@
-# VeriForm: AI-Powered Registration Portal ✨
+# VeriForm: Automated Image Validation System 
 
 A full-stack application for user registration featuring AI-powered face detection and data validation, built with Next.js and Flask. Deployed on Vercel and Render.
 
